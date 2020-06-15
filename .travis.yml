@@ -3,6 +3,13 @@ language: node_js
 node_js:
 - '10'
 
+services:
+  - docker
+
 script:
-  - npm install
+  - docker login --username=_ --password=3933e872-8810-42b0-82e9-1743f8a4d08c registry.heroku.com
+  - docker build -t registry.heroku.com/bricks-in-the-wall/web .
+  - docker push registry.heroku.com/bricks-in-the-wall/web
+  - heroku container:login
+  - heroku container:release web --app bricks-in-the-wall
     
