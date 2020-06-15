@@ -28,5 +28,5 @@ module.exports = {
     parseCookies: parseCookies,
     removeFromArray: removeFromArray,
     fillArrayWithTrueValues: fillArrayWithTrueValues,
-    url: 'https://serve123.herokuapp.com' //http://localhost:3000
+    url: 'https://bricks-in-the-wall.herokuapp.com' //http://localhost:3000
 }
