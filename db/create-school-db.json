@@ -1,30 +1,30 @@
 {
     "AttributeDefinitions": [
         {
-            "AttributeName": "name",
+            "AttributeName": "TeacherName",
             "AttributeType": "S"
         },
         {
-            "AttributeName": "dob",
+            "AttributeName": "DOB",
             "AttributeType": "S"
         },
         {
-            "AttributeName": "subject",
+            "AttributeName": "Subject",
             "AttributeType": "S"
         },
         {
-            "AttributeName": "class",
+            "AttributeName": "SectionClass",
             "AttributeType": "S"
         }
     ],
     "TableName": "Teachers",
     "KeySchema": [
         {
-            "AttributeName": "name",
+            "AttributeName": "TeacherName",
             "KeyType": "HASH"
         },
         {
-            "AttributeName": "dob",
+            "AttributeName": "DOB",
             "KeyType": "RANGE"
         }
     ],
@@ -33,7 +33,7 @@
             "IndexName": "Subject-Index",
             "KeySchema": [
                 {
-                    "AttributeName": "subject",
+                    "AttributeName": "Subject",
                     "KeyType": "HASH"
                 }
             ],
@@ -46,10 +46,10 @@
             }
         },
         {
-            "IndexName": "Class-Index",
+            "IndexName": "SectionClass-Index",
             "KeySchema": [
                 {
-                    "AttributeName": "class",
+                    "AttributeName": "SectionClass",
                     "KeyType": "HASH"
                 }
             ],

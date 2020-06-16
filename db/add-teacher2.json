@@ -1,0 +1,6 @@
+{
+    "TeacherName": {"S": "Anita Chaturvedi"},
+    "DOB": {"S": "14/08/1950"},
+    "Subject": {"S": "Science"},
+    "SectionClass": {"S": "X-A"}
+ }

@@ -1,0 +1,6 @@
+{
+    "TeacherName": {"S": "Anjali Khanna"},
+    "DOB": {"S": "02/03/1963"},
+    "Subject": {"S": "Science"},
+    "SectionClass": {"S": "XI-C"}
+ }
