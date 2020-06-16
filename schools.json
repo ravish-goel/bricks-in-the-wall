@@ -9,13 +9,29 @@
             },
             "classes":{
                 "10": {
-                    "classTeacherCode": "teacher code token",
-                    "sections": ["a", "b", "c"]
+                    "sections": [
+                        {
+                            "name": "a",
+                            "classTeacherCode": "teacher code token"
+                        },
+                        {
+                            "name": "b",
+                            "classTeacherCode": "teacher code token"
+                        }
+                    ]
                 },
                 "12": {
-                    "classTeacherCode": "teacher code token",
-                    "sections": ["a", "b", "c"]
-                }
+                    "sections": [
+                        {
+                            "name": "a",
+                            "classTeacherCode": "teacher code token"
+                        },
+                        {
+                            "name": "b",
+                            "classTeacherCode": "teacher code token"
+                        }
+                    ]
+                },
             },
             "teachers": {
                 "teacher code token": {
