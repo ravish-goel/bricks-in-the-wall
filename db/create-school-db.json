@@ -1,0 +1,70 @@
+{
+    "AttributeDefinitions": [
+        {
+            "AttributeName": "name",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "dob",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "subject",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "class",
+            "AttributeType": "S"
+        }
+    ],
+    "TableName": "Teachers",
+    "KeySchema": [
+        {
+            "AttributeName": "name",
+            "KeyType": "HASH"
+        },
+        {
+            "AttributeName": "dob",
+            "KeyType": "RANGE"
+        }
+    ],
+    "GlobalSecondaryIndexes": [
+        {
+            "IndexName": "Subject-Index",
+            "KeySchema": [
+                {
+                    "AttributeName": "subject",
+                    "KeyType": "HASH"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 5,
+                "WriteCapacityUnits": 5
+            }
+        },
+        {
+            "IndexName": "Class-Index",
+            "KeySchema": [
+                {
+                    "AttributeName": "class",
+                    "KeyType": "HASH"
+                }
+            ],
+            "Projection": {
+                "ProjectionType": "ALL"
+            },
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 5,
+                "WriteCapacityUnits": 5
+            }
+        }
+    ],
+    "BillingMode": "PROVISIONED",
+    "ProvisionedThroughput": {
+        "ReadCapacityUnits": 5,
+        "WriteCapacityUnits": 5
+    }
+}
