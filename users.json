@@ -1,0 +1,4 @@
+[
+    {"user": "xyz", "password": "qwerty", "role": "admin", "schoolCode": "school code token"},
+    {"user": "abc", "password": "poiuyt", "role": "teacher", "teacherCode": "teacher code token", "schoolCode": "school code token"}
+]

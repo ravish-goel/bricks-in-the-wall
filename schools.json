@@ -1,0 +1,49 @@
+[
+    {
+        "school code token": {
+            "principal": {
+                "lastName": "",
+                "firstName": "",
+                "mobile":"",
+                "email":""
+            },
+            "classes":{
+                "10": {
+                    "classTeacherCode": "teacher code token",
+                    "sections": ["a", "b", "c"]
+                },
+                "12": {
+                    "classTeacherCode": "teacher code token",
+                    "sections": ["a", "b", "c"]
+                }
+            },
+            "teachers": {
+                "teacher code token": {
+                    "lastName": "",
+                    "firstName": "",
+                    "mobile":"",
+                    "email":"",
+                    "subjects": [
+                        "maths-12",
+                        "physics-11"
+                    ]
+                },
+                "teacher code token": {
+                    "lastName": "",
+                    "firstName": "",
+                    "mobile":"",
+                    "email":"",
+                    "subjects": [
+                        "maths-12",
+                        "chemistry-11"
+                    ]
+                }
+            },
+            "subjects":{
+                "1": ["maths", "english"],
+                "10": ["maths", "physics", "chemistry"],
+                "12": ["maths", "physics", "chemistry", "biology"]
+            }
+        }
+    }
+]
