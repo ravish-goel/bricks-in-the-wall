@@ -1,0 +1,32 @@
+Run DynamoDB container locally
+docker run -p 8000:8000 amazon/dynamodb-local
+
+List all tables
+aws --profile=personal dynamodb list-tables --endpoint-url http://localhost:8000
+
+Creating a table using input json file
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 create-table --cli-input-json file://create-school-db.json
+
+Adding item to table using input json file
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 put-item --table-name Teachers --item file://add-teacher.json
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 put-item --table-name Teachers --item file://add-teacher2.json
+
+Listing the whole contents of database
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 scan --table-name Teachers
+
+Querying the table using partition key and sort key
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 query --table-name Teachers --key-condition-expression "TeacherName = :n and begins_with(DOB, :dt)" --expression-attribute-values  file://values.json
+
+Querying using global secondary index 1 (subject)
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 query \
+    --table-name Teachers \
+    --index-name Subject-Index \
+    --key-condition-expression "Subject = :name" \
+    --expression-attribute-values  '{":name":{"S":"Science"}}'
+
+Querying using global secondary index 2 (SectionClass)
+aws --profile=personal dynamodb --endpoint-url http://localhost:8000 query \
+    --table-name Teachers \
+    --index-name SectionClass-Index \
+    --key-condition-expression "SectionClass = :ct" \
+    --expression-attribute-values  '{":ct":{"S":"X-A"}}'
